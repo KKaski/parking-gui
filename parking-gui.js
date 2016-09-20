@@ -32,11 +32,13 @@ if (Meteor.isClient) {
     }
   });
 
-   Template.map.spaces = function () {
+   Template.map.helpers({
+    spaces:function () {
       var area = Parking.findOne({name: this.place});
       console.log("Getting Area: "+this.place+" places:"+area.places);
       return area;
     }
+    });
 }
 
 // On server startup, create some players if the database is empty.
