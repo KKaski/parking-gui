@@ -1,0 +1,39 @@
+<head>
+  <title>Parking</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="logo"></div>
+    <h1 class="title">Parking</h1>
+    <div class="subtitle">Select a area to add free space</div>
+    {{> parking}}
+  </div>
+</body>
+
+<template name="parking">
+  <ol class="parking">
+    {{#each areas}}
+      {{> area}}
+    {{/each}}
+  </ol>
+
+  {{#if selectedArea}}
+    <div class="details">
+      <div class="name">{{selectedArea}}</div>
+      <button class="inc">Free 1 space</button>
+    </div>
+  {{else}}
+    <div class="message">Click a area to select</div>
+  {{/if}}
+</template>
+
+<template name="area">
+  <li class="area {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="places">{{places}}</span>
+  </li>
+</template>
+
