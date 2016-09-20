@@ -6,7 +6,7 @@ Parking = new Mongo.Collection("parking");
 if (Meteor.isClient) {
   Template.parking.helpers({
     areas: function () {
-      return Parking.find({}, { sort: { places: -1, name: 1 } });
+      return Parking.find({}, { sort: { order: 1, name: 1 } });
     },
     selectedArea: function () {
       var area = Parking.findOne(Session.get("selectedArea"));
@@ -31,19 +31,25 @@ if (Meteor.isClient) {
       Session.set("selectedArea", this._id);
     }
   });
+
+   Template.map.spaces = function () {
+      var area = Parking.findOne({name: this.place});
+      console.log("Getting Area: "+this.place+" places:"+area.places);
+      return area;
+    }
 }
 
 // On server startup, create some players if the database is empty.
 if (Meteor.isServer) {
   Meteor.startup(function () {
     if (Parking.find().count() === 0) {
-      var names = ["P1", "P2", "P3",
-                   "P4", "P5", "P6",
-                   "P7", "P8", "P9",
-                   "P10", "VP - Karakaari", "VP - Karaportti"];
+      var count=0;
+      var names = ["P3", "P5", "P10"];
       _.each(names, function (name) {
+        count++;
         Parking.insert({
           name: name,
+          order: count,
           places: Math.floor(Random.fraction() * 10) * 2
         });
       });
