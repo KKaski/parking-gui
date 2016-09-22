@@ -20,6 +20,12 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.parking.events({
+    'click .dec': function () {
+      Parking.update(Session.get("selectedArea"), {$inc: {places: -1}});
+    }
+  });
+
   Template.area.helpers({
     selected: function () {
       return Session.equals("selectedArea", this._id) ? "selected" : '';
@@ -37,6 +43,15 @@ if (Meteor.isClient) {
       var area = Parking.findOne({name: this.place});
       console.log("Getting Area: "+this.place+" places:"+area.places);
       return area;
+    }
+    });
+
+  Template.marker.helpers({
+    free:function () {
+      var area = Parking.findOne({name: this.place});
+      var result = area.places>0?'free':'';
+      console.log("Getting Area2: "+this.place+" places:"+result);
+      return result;
     }
     });
 }

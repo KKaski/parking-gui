@@ -2,194 +2,160 @@
   <title>Parking</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="styles.css" type="text/css" rel="stylesheet"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="outer">
-    <div class="logo"></div>
-    <h1 class="title">Parking Advisor</h1>
-    <div class="subtitle">Select a area to add free space</div>
-    {{> parking}}
-  </div>
 
-    <div id="base" class="">
-      <!-- Unnamed (Image) -->
-      <div id="u0" class="ax_default image">
-        <img id="u0_img" class="img " src="images/u0.jpg"/>
+
+
+  <div id="base" class="">
+
+    <div class="header">
+      <div class="logo"></div>
+      <h1 class="title">Parking Advisor</h1>
+    </div>
+
+    <!-- Unnamed (Image) -->
+    <div id="u0" class="ax_default image">
+      <img id="u0_img" class="img " src="images/u0.jpg" />
+
+      <!-- Table -->
+      <div class="outer">
+        {{> parking}}
+      </div>
+
+    </div>
+
+    <!-- P3 (Group) -->
+    <div id="u2" class="ax_default" data-label="P3" data-width="250" data-height="79">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u3" class="ax_default box_2">
+        {{> marker id="u3_div" place="P3"}}
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u7" class="ax_default label">
+        <div id="u7_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u1" class="text" style="display:none; visibility: hidden">
-          <p><span></span></p>
+        <div id="u8" class="text">
+          <p><span>Plug-IT:</span></p>
         </div>
       </div>
 
-      <!-- P3 (Group) -->
-      <div id="u2" class="ax_default" data-label="P3" data-width="250" data-height="79">
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u3" class="ax_default box_2">
-          <div id="u3_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u4" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Horizontal Line) -->
-        <div id="u5" class="ax_default line">
-          <img id="u5_img" class="img " src="images/u5.png"/>
-          <!-- Unnamed () -->
-          <div id="u6" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u7" class="ax_default label">
-          <div id="u7_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u8" class="text">
-            <p><span>Plug-IT:</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u9" class="ax_default label">
-          <div id="u9_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="P3" class="text">
-            <p><span id="P3T">{{> map place="P3"}} available</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u11" class="ax_default heading_2">
-          <div id="u11_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u12" class="text">
-            <p><span>P3</span></p>
-          </div>
+      <!-- Unnamed (Rectangle) -->
+      <div id="u9" class="ax_default label">
+        <div id="u9_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="P3" class="text">
+          <p><span id="P3T">{{> map place="P3"}} available</span></p>
         </div>
       </div>
 
-      <!-- P10 (Group) -->
-      <div id="u13" class="ax_default" data-label="P10" data-width="248" data-height="79">
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u14" class="ax_default box_2">
-          <div id="u14_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u15" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Horizontal Line) -->
-        <div id="u16" class="ax_default line">
-          <img id="u16_img" class="img " src="images/u16.png"/>
-          <!-- Unnamed () -->
-          <div id="u17" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u18" class="ax_default label">
-          <div id="u18_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u19" class="text">
-            <p><span>Plug-IT:</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u20" class="ax_default label">
-          <div id="u20_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="P10" class="text">
-            <p><span id="P10T">{{> map place="P10"}} available</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u22" class="ax_default heading_2">
-          <div id="u22_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u23" class="text">
-            <p><span>P10</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- P5 (Group) -->
-      <div id="u24" class="ax_default" data-label="P5" data-width="226" data-height="79">
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u25" class="ax_default box_2">
-          <div id="u25_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u26" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Horizontal Line) -->
-        <div id="u27" class="ax_default line">
-          <img id="u27_img" class="img " src="images/u27.png"/>
-          <!-- Unnamed () -->
-          <div id="u28" class="text" style="display:none; visibility: hidden">
-            <p><span></span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u29" class="ax_default label">
-          <div id="u29_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u30" class="text">
-            <p><span>Plug-IT:</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u31" class="ax_default label">
-          <div id="u31_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="P5" class="text">
-             {{> map place="P5"}} available
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u33" class="ax_default heading_2">
-          <div id="u33_div" class=""></div>
-          <!-- Unnamed () -->
-          <div id="u34" class="text">
-             <p><span>P5</span></p>
-          </div>
+      <!-- Unnamed (Rectangle) -->
+      <div id="u11" class="ax_default heading_2">
+        <div id="u11_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u12" class="text">
+          <p><span>P3</span></p>
         </div>
       </div>
     </div>
+
+    <!-- P10 (Group) -->
+    <div id="u13" class="ax_default" data-label="P10" data-width="248" data-height="79">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u14" class="ax_default box_2">
+          {{> marker id="u14_div" place="P10"}}
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u18" class="ax_default label">
+        <div id="u18_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u19" class="text">
+          <p><span>Plug-IT:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u20" class="ax_default label">
+        <div id="u20_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="P10" class="text">
+          <p><span id="P10T">{{> map place="P10"}} available</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u22" class="ax_default heading_2">
+        <div id="u22_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u23" class="text">
+          <p><span>P10</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- P5 (Group) -->
+    <div id="u24" class="ax_default" data-label="P5" data-width="226" data-height="79">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u25" class="ax_default box_2">
+          {{> marker id="u25_div" place="P5"}}
+      </div>
+
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u29" class="ax_default label">
+        <div id="u29_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u30" class="text">
+          <p><span>Plug-IT:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u31" class="ax_default label">
+        <div id="u31_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="P5" class="text">
+          {{> map place="P5"}}
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u33" class="ax_default heading_2">
+        <div id="u33_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u34" class="text">
+          <p><span>P5</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 
 <template name="parking">
   <ol class="parking">
-    {{#each areas}}
-      {{> area}}
-    {{/each}}
+    {{#each areas}} {{> area}} {{/each}}
   </ol>
 
   {{#if selectedArea}}
-    <div class="details">
-      <div class="name">{{selectedArea}}</div>
-      <button class="inc">Free 1 space</button>
-    </div>
+  <div class="details">
+    <div class="name">{{selectedArea}}</div>
+    <button class="inc">+1</button>
+    <button class="dec">-1</button>
+  </div>
   {{else}}
-    <div class="message">Click a area to select</div>
+  <div class="message">Click a area to select</div>
   {{/if}}
 </template>
 
@@ -201,10 +167,21 @@
 </template>
 
 <template name="map">
-    {{#with spaces}}
-    <p>
-      <span>{{places}}</span>
-    </p>
-    {{/with}}
+  {{#with spaces}}
+  <p>
+    <span>{{places}}</span>
+  </p>
+  {{/with}}
 </template>
 
+<template name="marker">
+  {{#if free}}
+    <div id={{id}} class="marker_free"></div>
+  {{else}}
+    <div id={{id}} class="marker_full"></div>
+  {{/if}}
+  <!-- Unnamed () -->
+  <div id="u4" class="text" style="display:none; visibility: hidden">
+    <p><span></span></p>
+  </div>
+</template>

@@ -9,22 +9,22 @@
   text-align:left;
 }
 #base {
-  position:absolute;
-  z-index:0;
+  
+
 }
 #u0_img {
-  position:absolute;
+  position:relative;
   left:0px;
-  top:0px;
-  width:714px;
-  height:1094px;
+  top:100px;
+  width: 83%;
+  height:auto;
 }
 #u0 {
   position:absolute;
   left:107px;
   top:34px;
-  width:714px;
-  height:1094px;
+  width:auto;
+  height:auto;
 }
 #u1 {
   position:absolute;
@@ -35,9 +35,10 @@
   word-wrap:break-word;
 }
 #u2 {
-  position:absolute;
-  left:0px;
-  top:0px;
+  position:fixed;
+  left:-100px;
+  top:100px;
+  padding-bottom: 56.25%;
   width:0px;
   height:0px;
 }
@@ -47,13 +48,6 @@
   top:0px;
   width:184px;
   height:79px;
-  background:inherit;
-  background-color:rgba(255, 255, 51, 1);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
 }
 #u3 {
   position:absolute;
@@ -195,9 +189,9 @@
   white-space:nowrap;
 }
 #u13 {
-  position:absolute;
-  left:0px;
-  top:0px;
+  position:fixed;
+  left:-730px;
+  top:-240px;
   width:0px;
   height:0px;
 }
@@ -207,13 +201,6 @@
   top:0px;
   width:184px;
   height:79px;
-  background:inherit;
-  background-color:rgba(255, 255, 51, 1);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
 }
 #u14 {
   position:absolute;
@@ -355,8 +342,8 @@
   white-space:nowrap;
 }
 #u24 {
-  position:absolute;
-  left:0px;
+  position:fixed;
+  left:-200px;
   top:0px;
   width:0px;
   height:0px;
@@ -367,13 +354,6 @@
   top:0px;
   width:184px;
   height:79px;
-  background:inherit;
-  background-color:rgba(255, 255, 51, 1);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
 }
 #u25 {
   position:absolute;
@@ -577,6 +557,26 @@
   text-align:left;
 }
 .line {
+}
+
+.marker_free {
+  background:inherit;
+  background-color:rgb(102,255,230);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+
+.marker_full {
+  background:inherit;
+  background-color:rgb(255, 133, 102);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
 }
 
 /* so the window resize fires within a frame in IE7 */
