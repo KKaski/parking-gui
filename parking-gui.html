@@ -15,7 +15,7 @@
 
 <body>
 
- <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+ <nav class="navbar navbar-inverse navbar-default navbar-fixed-top " role="navigation">
   <div class="container-fluid">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -36,11 +36,10 @@
 </nav>
 
   <section id="map" class="map-section" >
-  <div id="base" class="">
+
     <!-- Unnamed (Image) -->
     <div id="u0" class="ax_default image">
       <img id="u0_img" class="img " src="images/u0.jpg" />
-    </div>
 
     <!-- P3 (Group) -->
     <div id="u2" class="ax_default" data-label="P3" >
@@ -110,6 +109,13 @@
   <h1>About Nokia Parking Advisor</h1>
   This is simple Bluemix demonstration application writen in Node.js and Meteor frameworks.
 </section>
+
+<script>
+  $('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});
+  </script>
+  
 </body>
 
 <template name="parking">
@@ -152,3 +158,4 @@
     <p><span></span></p>
   </div>
 </template>
+
