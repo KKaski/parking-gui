@@ -836,3 +836,19 @@ font-size: 40px;
   align-content: center;
   text-align: center;
 }
+
+.mylabel {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400; 
+  align-content: flex-start;
+  text-align: left;
+}
+
+.myvalue {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  align-content: flex-end;
+  text-align: right;
+}
