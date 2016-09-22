@@ -6,62 +6,55 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <link href="styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-
-
-  <div id="base" class="">
-
-    <div class="header">
-      <div class="logo"></div>
-      <h1 class="title">Parking Advisor</h1>
+ <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Nokia Parking Advisor</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#map">Map</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+  <section id="map" class="map-section" >
+  <div id="base" class="">
     <!-- Unnamed (Image) -->
     <div id="u0" class="ax_default image">
       <img id="u0_img" class="img " src="images/u0.jpg" />
-
-      <!-- Table -->
-      <div class="outer">
-        {{> parking}}
-      </div>
-
     </div>
 
     <!-- P3 (Group) -->
-    <div id="u2" class="ax_default" data-label="P3" data-width="250" data-height="79">
-
+    <div id="u2" class="ax_default" data-label="P3" >
       <!-- Unnamed (Rectangle) -->
       <div id="u3" class="ax_default box_2">
         {{> marker id="u3_div" place="P3"}}
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u7" class="ax_default label">
-        <div id="u7_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="u8" class="text">
-          <p><span>Plug-IT:</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u9" class="ax_default label">
-        <div id="u9_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="P3" class="text">
-          <p><span id="P3T">{{> map place="P3"}}</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
       <div id="u11" class="ax_default heading_2">
         <div id="u11_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u12" class="text">
-          <p><span>P3</span></p>
+        <div id="u12" class="text_large">
+          <p><span>P3 {{> map place="P3"}}</span></p>
         </div>
       </div>
     </div>
@@ -75,29 +68,11 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u18" class="ax_default label">
-        <div id="u18_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="u19" class="text">
-          <p><span>Plug-IT:</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u20" class="ax_default label">
-        <div id="u20_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="P10" class="text">
-          <p><span id="P10T">{{> map place="P10"}}</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
       <div id="u22" class="ax_default heading_2">
         <div id="u22_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u23" class="text">
-          <p><span>P10</span></p>
+        <div id="u23" class="text_large">
+          <p><span>P10 {{> map place="P10"}}</span></p>
         </div>
       </div>
     </div>
@@ -110,37 +85,31 @@
           {{> marker id="u25_div" place="P5"}}
       </div>
 
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u29" class="ax_default label">
-        <div id="u29_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="u30" class="text">
-          <p><span>Plug-IT:</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u31" class="ax_default label">
-        <div id="u31_div" class=""></div>
-        <!-- Unnamed () -->
-        <div id="P5" class="text">
-          {{> map place="P5"}}
-        </div>
-      </div>
-
       <!-- Unnamed (Rectangle) -->
       <div id="u33" class="ax_default heading_2">
         <div id="u33_div" class=""></div>
         <!-- Unnamed () -->
-        <div id="u34" class="text">
-          <p><span>P5</span></p>
+        <div id="u34" class="text_large">
+          <p><span class="text">P5</span><span>&nbsp;{{> map place="P5"}}</span></p>
         </div>
       </div>
     </div>
   </div>
+  </section>
 
+  <section id="table" class="table-section" >
+    <div class="outer">
+    <div class="logo"></div>
+    <h1 class="title">Parking Advisor</h1>
+    <div class="subtitle">Select a area to add free space</div>
+    {{> parking}}
+  </div>
+  </section>
 
+<section id="about" class="about-section">
+  <h1>About Nokia Parking Advisor</h1>
+  This is simple Bluemix demonstration application writen in Node.js and Meteor frameworks.
+</section>
 </body>
 
 <template name="parking">
@@ -168,9 +137,7 @@
 
 <template name="map">
   {{#with spaces}}
-  <p>
-    <span>{{places}}</span>
-  </p>
+    {{places}}
   {{/with}}
 </template>
 

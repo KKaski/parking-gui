@@ -12,19 +12,20 @@ body {
 }
 
 .header {
-  margin: 0 auto;
+  position:relative;
+  margin: 0 0;
   max-width: 100%;
 }
 
 .outer {
-  position:absolute;
+  position:relative;
   margin: 0 0;
-  left:-100px;
-  top:78%;
+  left:200px;
+  top:0%;
   background: rgb(255,255,255);
   border: silver;
-  max-width: 150px;
-  min-width: 150px;
+  max-width: 50%;
+  min-width: 50%;
 }
 
 .logo {
@@ -217,4 +218,28 @@ body {
   .area.selected:hover {
     background-color: #fefff4;
   }
+}
+
+.map-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.table-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.about-section {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    left:200px;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
 }
