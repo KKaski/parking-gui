@@ -52,6 +52,12 @@ if (Meteor.isClient) {
       var result = area.places>0?'free':'';
       console.log("Getting Area2: "+this.place+" places:"+result);
       return result;
+    },
+    free_low:function () {
+      var area = Parking.findOne({name: this.place});
+      var result = area.places<5?'free_low':'';
+      console.log("Getting Area3: "+this.place+" places:"+result);
+      return result;
     }
     });
 }

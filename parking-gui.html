@@ -150,7 +150,11 @@
 
 <template name="marker">
   {{#if free}}
-    <div id={{id}} class="marker_free"></div>
+    {{#if free_low}}
+      <div id={{id}} class="marker_free_low"></div>
+    {{else}}
+      <div id={{id}} class="marker_free"></div>
+    {{/if}}
   {{else}}
     <div id={{id}} class="marker_full"></div>
   {{/if}}
