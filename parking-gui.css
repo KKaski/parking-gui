@@ -20,12 +20,22 @@ body {
 .outer {
   position:relative;
   margin: 0 0;
-  left:200px;
+  left:150px;
   top:0%;
   background: rgb(255,255,255);
   border: silver;
-  max-width: 50%;
-  min-width: 100px;
+  max-width: 60%;
+  min-width: 60px;
+}
+
+.camera {
+  position:relative;
+  margin: 0 0;
+  left:10px;
+  top:0%;
+  background: rgb(255,255,255);
+  border: silver;
+  width:90%;
 }
 
 .logo {
@@ -221,26 +231,36 @@ body {
 }
 
 .map-section {
-    height: 300%;
+    height: 3000px;
     padding-top: 150px;
     text-align: center;
     background: #fff;
 }
 
 .table-section {
-    height: 100%;
+    height: 3000px;
+    width: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
 }
 
-.about-section {
+.camera-section {
     position: relative;
-    height: 100%;
-    width: 50%;
+    height: 3000px;
+    width: 20%;
     left:200px;
     padding-top: 150px;
     text-align: center;
     background: #fff;
+}
+.about-section {
+    position: relative;
+    height: 3000px;
+    width: 100%;
+    left:0px;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
 }
 

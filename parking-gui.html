@@ -29,6 +29,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#map">Map</a></li>
         <li><a href="#table">Table</a></li>
+        <li><a href="#camera">Camera</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </div>
@@ -37,6 +38,7 @@
 
   <section id="map" class="map-section" >
 
+    
     <!-- Unnamed (Image) -->
     <div id="u0" class="ax_default image">
       <img id="u0_img" class="img " src="images/u0.jpg" />
@@ -94,7 +96,6 @@
         </div>
       </div>
     </div>
-  
   </section>
 
   <section id="table" class="table-section" >
@@ -106,6 +107,12 @@
   </div>
   </section>
 
+  <section id="camera" class="camera-section" >
+    <div class="camera">
+      <img id="camera_image" src="http://kimmotest-ms.mybluemix.net/now"/>
+  </div>
+  </section>
+
 <section id="about" class="about-section">
   <h1>About Nokia Parking Advisor</h1>
   This is simple Bluemix demonstration application writen in Node.js and Meteor frameworks.
@@ -114,8 +121,9 @@
 <script>
   $('.navbar-collapse a').click(function(){
     $(".navbar-collapse").collapse('hide');
-});
+  });
   </script>
+ 
 
 </body>
 
