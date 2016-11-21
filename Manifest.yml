@@ -1,0 +1,9 @@
+applications:
+- memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: parking-gui
+  host: parking-gui
+  buildpack: https://github.com/KKaski/cf-meteor-buildpack.git
+  services:
+    - parking-mongodb
