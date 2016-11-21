@@ -10,6 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/jTinder.css">
+  <script type="text/javascript" src="js/jquery.transform2d.js"></script>
+  <script type="text/javascript" src="js/jquery.jTinder.js"></script>
 
 </head>
 
@@ -30,6 +33,7 @@
         <li class="active"><a href="#map">Map</a></li>
         <li><a href="#table">Table</a></li>
         <li><a href="#camera">Camera</a></li>
+         <li><a href="#train">Train</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </div>
@@ -109,9 +113,32 @@
 
   <section id="camera" class="camera-section" >
     <div class="camera">
-      <img id="camera_image" src="http://kimmotest-ms.mybluemix.net/now"/>
+      <div>This is realtime image from visitor parking area managed by Watson</div>
+      <img id="camera_image" class="camera-image" src="http://parking-nr.mybluemix.net/now"/>
   </div>
   </section>
+
+  <section id="train" class="train-section">
+  <h1>Train IBM Watson</h1>
+  <div>Watson Image Recognition API allows training through providing positive and negative images.
+    The classifier can be continously trained by providing additional images to the service representing
+    positive or negative images representing the detectable situation.</div>
+    <a href="https://www.ibm.com/watson/developercloud/visual-recognition.html">Watson Image Recognition</a>
+    
+    <div>Sweep left if the image is positive example and right if this is negative example. 
+    Sweep down to delete image from samples</div>
+
+    <div id="tinderslide">
+    <ul>
+        <li class="pane1"><div class="img"></div><div>Miami Beach</div><div class="like"></div><div class="dislike"></div></li>
+        <li class="pane2"><div class="img"></div><div>San Francisco</div><div class="like"></div><div class="dislike"></div></li>
+        <li class="pane3"><div class="img"></div><div>Chicago</div><div class="like"></div><div class="dislike"></div></li>
+        <li class="pane4"><div class="img"></div><div>New York</div><div class="like"></div><div class="dislike"></div></li>
+        <li class="pane5"><div class="img"></div><div>Beach</div><div class="like"></div><div class="dislike"></div></li>
+    </ul>
+</div>
+
+</section>
 
 <section id="about" class="about-section">
   <h1>About Nokia Parking Advisor</h1>
@@ -119,12 +146,16 @@
 </section>
 
 <script>
-  $('.navbar-collapse a').click(function(){
-    $(".navbar-collapse").collapse('hide');
-  });
-  </script>
- 
+  $( document ).ready(function() {
+    $('.navbar-collapse a').click(function(){
+      $(".navbar-collapse").collapse('hide');
+    });
 
+    $("#tinderslide").jTinder();
+  }
+</script>
+
+ 
 </body>
 
 <template name="parking">
