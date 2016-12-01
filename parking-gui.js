@@ -41,15 +41,37 @@ if (Meteor.isClient) {
    Template.map.helpers({
     spaces:function () {
       var area = Parking.findOne({name: this.place});
-      console.log("Getting Area: "+this.place+" places:"+area.places);
+      //console.log("Getting Area: "+this.place+" places:"+area.places);
       return area;
+    }
+    });
+
+    Template.watson.events({
+        'click .inc': function () {
+          console.log("Calling watson parking service");
+          Meteor.call('watsonparking',function(err,res){ 
+            console.log(res.content);
+            var result = JSON.parse(res.content);
+            console.log("score:"+result.score+":url:"+result.url);
+            Session.set("watsondata", result);
+            return result;
+      }); 
+      }
+    });
+
+    Template.watson.helpers({
+    watsonparking:function () {
+      if(Session.get("watsondata")===undefined)
+        return {};
+
+      return Session.get("watsondata");     
     }
     });
 
   Template.marker.helpers({
     free:function () {
       var area = Parking.findOne({name: this.place});
-      var result = area.places>0?'free':'';
+      var result = area && area.places>0?'free':'';
       console.log("Getting Area2: "+this.place+" places:"+result);
       return result;
     },
@@ -78,4 +100,19 @@ if (Meteor.isServer) {
       });
     }
   });
+  
+ Meteor.methods({watsonparking: function () {
+  this.unblock();
+  try {
+    console.log("Watsonparking query");
+    var result = HTTP.call("GET", "https://parking-nr.mybluemix.net/simulate?output=json",{});
+    console.log("Result:"+result);
+    return result;
+  } catch (e) {
+    // Got a network error, time-out or HTTP error in the 400 or 500 range.
+    console.log("Exception:"+e);
+    return false;
+  }
+}}); 
+
 }

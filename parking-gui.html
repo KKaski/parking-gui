@@ -3,17 +3,11 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" charset="utf-8" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link href="styles.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="css/scrolling-nav.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/jTinder.css">
-  <script type="text/javascript" src="js/jquery.transform2d.js"></script>
-  <script type="text/javascript" src="js/jquery.jTinder.js"></script>
-
 </head>
 
 <body>
@@ -114,7 +108,7 @@
   <section id="camera" class="camera-section" >
     <div class="camera">
       <div>This is realtime image from visitor parking area managed by Watson</div>
-      <img id="camera_image" class="camera-image" src="http://parking-nr.mybluemix.net/now"/>
+      {{> watson}}
   </div>
   </section>
 
@@ -122,22 +116,14 @@
   <h1>Train IBM Watson</h1>
   <div>Watson Image Recognition API allows training through providing positive and negative images.
     The classifier can be continously trained by providing additional images to the service representing
-    positive or negative images representing the detectable situation.</div>
+    positive or negative images representing the detectable situation.
+  </div>
     <a href="https://www.ibm.com/watson/developercloud/visual-recognition.html">Watson Image Recognition</a>
-    
-    <div>Sweep left if the image is positive example and right if this is negative example. 
-    Sweep down to delete image from samples</div>
 
-    <div id="tinderslide">
-    <ul>
-        <li class="pane1"><div class="img"></div><div>Miami Beach</div><div class="like"></div><div class="dislike"></div></li>
-        <li class="pane2"><div class="img"></div><div>San Francisco</div><div class="like"></div><div class="dislike"></div></li>
-        <li class="pane3"><div class="img"></div><div>Chicago</div><div class="like"></div><div class="dislike"></div></li>
-        <li class="pane4"><div class="img"></div><div>New York</div><div class="like"></div><div class="dislike"></div></li>
-        <li class="pane5"><div class="img"></div><div>Beach</div><div class="like"></div><div class="dislike"></div></li>
-    </ul>
-</div>
-
+  <div>
+    Check out the resto of the Watson APIs in Bluemix catalog
+  </div>
+    <a href="https://console.ng.bluemix.net/catalog/?taxonomyNavigation=applications&category=watson">Watson APIs</a>
 </section>
 
 <section id="about" class="about-section">
@@ -179,6 +165,14 @@
     <span class="name">{{name}}</span>
     <span class="places">{{places}}</span>
   </li>
+</template>
+
+<template name="watson">
+  {{#with watsonparking}}
+    <button class="inc">Next</button>
+    <h3>{{score}}</h3>
+  <img id="camera_image" class="camera-image" src="{{url}}"/>
+  {{/with}}
 </template>
 
 <template name="map">
