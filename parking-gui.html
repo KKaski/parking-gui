@@ -119,21 +119,24 @@
     positive or negative images representing the detectable situation.
   </div>
     <a href="https://www.ibm.com/watson/developercloud/visual-recognition.html">Watson Image Recognition</a>
-
+    <br>
   <div>
-    Check out the resto of the Watson APIs in Bluemix catalog
+    <br>
+    <h4>Check out the rest of the Watson APIs in Bluemix catalog</h4>
   </div>
     <a href="https://console.ng.bluemix.net/catalog/?taxonomyNavigation=applications&category=watson">Watson APIs</a>
 </section>
 
 <section id="about" class="about-section">
+  <div class="about-text">
   <h1>About Nokia Parking Advisor</h1>
-  This is Demo app runnin on Bluemix platform. Application is writen with Node.js and utilizing Meteor framework in the GUU layer.
-  Application uses Node-Red to implement set of microservices. Watson is used for Visual recognition. 
-  
+  This is Demo app running on IBM Bluemix platform. Application is writen with Node.js and utilizing Meteor framework in the GUU layer.
+  Application uses Node-Red to implement set of microservices. Watson is used for Visual recognition of the Demo. 
+
   <h2>Some Implementation details</h2>
   <a href="https://parking-nr.mybluemix.net/">Node-Red Code</a>
-  Application has two node.js runtimes. One for serving the MEteor based GUI layer and second to implement
+  <br>
+  Application has two node.js runtimes. One for serving the Meteor based GUI layer and second to implement
   microservices using Node-Red framework. Node-Red integrates to the car charching API through rest and updates the 
   Mongo database with the current free spaces information. Meteor framework distributes changes to all connected clients
   as the data is updated.
@@ -141,6 +144,7 @@
   Timeseries data of freespaces is collected to cloudant nosql database and replicated to dashDB for analytical
   queries. Watson Visual recognition is trained with parking space images and provides confidence level of free
   spaces in the image.
+  </div>
 </section>
 
 <script>

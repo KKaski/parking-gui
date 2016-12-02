@@ -275,6 +275,12 @@ body {
     background: #fff;
 }
 
+.about-text {
+    position: relative;
+    width: 50%;
+    left: 30%; 
+}
+
 camera-image {
     position: absolute;
     max-width: 100%;
