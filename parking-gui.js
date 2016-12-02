@@ -48,11 +48,13 @@ if (Meteor.isClient) {
 
     Template.watson.events({
         'click .inc': function () {
+          Session.set("watsondata", {text:'Loading...'});
           console.log("Calling watson parking service");
           Meteor.call('watsonparking',function(err,res){ 
             console.log(res.content);
             var result = JSON.parse(res.content);
             console.log("score:"+result.score+":url:"+result.url);
+            result.text='Next';
             Session.set("watsondata", result);
             return result;
       }); 
@@ -62,7 +64,7 @@ if (Meteor.isClient) {
     Template.watson.helpers({
     watsonparking:function () {
       if(Session.get("watsondata")===undefined)
-        return {};
+        return {text:'Next'};
 
       return Session.get("watsondata");     
     }

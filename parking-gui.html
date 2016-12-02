@@ -128,7 +128,19 @@
 
 <section id="about" class="about-section">
   <h1>About Nokia Parking Advisor</h1>
-  This is simple Bluemix demonstration application writen in Node.js and Meteor frameworks.
+  This is Demo app runnin on Bluemix platform. Application is writen with Node.js and utilizing Meteor framework in the GUU layer.
+  Application uses Node-Red to implement set of microservices. Watson is used for Visual recognition. 
+  
+  <h2>Some Implementation details</h2>
+  <a href="https://parking-nr.mybluemix.net/">Node-Red Code</a>
+  Application has two node.js runtimes. One for serving the MEteor based GUI layer and second to implement
+  microservices using Node-Red framework. Node-Red integrates to the car charching API through rest and updates the 
+  Mongo database with the current free spaces information. Meteor framework distributes changes to all connected clients
+  as the data is updated.
+  <br>
+  Timeseries data of freespaces is collected to cloudant nosql database and replicated to dashDB for analytical
+  queries. Watson Visual recognition is trained with parking space images and provides confidence level of free
+  spaces in the image.
 </section>
 
 <script>
@@ -169,7 +181,7 @@
 
 <template name="watson">
   {{#with watsonparking}}
-    <button class="inc">Next</button>
+    <button class="inc">{{text}}</button>
     <h3>{{score}}</h3>
   <img id="camera_image" class="camera-image" src="{{url}}"/>
   {{/with}}
