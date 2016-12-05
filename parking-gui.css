@@ -20,12 +20,12 @@ body {
 .outer {
   position:relative;
   margin: 0 0;
-  left:150px;
+  left:120px;
   top:0%;
   background: rgb(255,255,255);
   border: silver;
-  max-width: 60%;
-  min-width: 60px;
+  max-width: 70%;
+  min-width: 20px;
 }
 
 .camera {
@@ -129,12 +129,15 @@ body {
 }
 
 .details {
+  display: absolute;
   overflow: hidden;
+  max-width: 80%;
+  min-width: 10px;
 }
 
 .details .name {
   display: inline-block;
-  width:100px;
+  width:50px;
   margin:0px;
   font-size: 1.5em;
   font-weight: 300;
@@ -234,7 +237,7 @@ body {
 }
 
 .map-section {
-    height: 100%;
+    height: 120%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -242,18 +245,17 @@ body {
 
 .table-section {
     position: relative;
-    height: 100%;
+    height: 120%;
     width: 120%;
-    left:-120px;
-    min-width: 650px;
-    padding-top: 50px;
+    left:-100px;
+    padding-top: 80px;
     text-align: center;
     background: #eee;
 }
 
 .watson-section {
     position: relative;
-    height: 100%;
+    height: 120%;
     width: 100%;
     left:0px;
     padding-top: 50px;
@@ -262,7 +264,7 @@ body {
 }
 .apis-section {
     position: relative;
-    height: 100%;
+    height: 120%;
     width: 100%;
     left:0px;
     padding-top: 50px;
@@ -273,7 +275,7 @@ body {
 }
 .about-section {
     position: relative;
-    height: 100%;
+    height: 120%;
     width: 100%;
     left:0px;
     padding-top: 50px;
