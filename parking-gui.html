@@ -12,7 +12,7 @@
 
 <body>
 
- <nav class="navbar navbar-inverse navbar-default navbar-fixed-top " role="navigation">
+ <nav class="navbar navbar-inverse navbar-default navbar-collapse navbar-fixed-top " role="navigation">
   <div class="container-fluid">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -151,7 +151,7 @@
 
 <script>
   $( document ).ready(function() {
-    $('.navbar-collapse a').click(function(){
+    $('.navbar-collapse a').click(function(e){
       $(".navbar-collapse").collapse('hide');
     });
   }
