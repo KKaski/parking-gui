@@ -145,17 +145,20 @@
 <template name="parking">
   <ol class="parking">
     {{#each areas}} {{> area}} {{/each}}
-  </ol>
 
-  {{#if selectedArea}}
-  <div class="details">
-    <div class="name">{{selectedArea}}</div>
-    <button class="inc">+1</button>
-    <button class="dec">-1</button>
-  </div>
-  {{else}}
-  <div class="message">Click a area to select</div>
-  {{/if}}
+  <li>
+    {{#if selectedArea}}
+    <div class="area">
+      <div class="name">{{selectedArea}}</div>
+      <button class="inc">+1</button>
+      <button class="dec">-1</button>
+    </div>
+    {{else}}
+    <div class="area">Click a area to select</div>
+    {{/if}}
+  </li>
+  
+  </ol>
 </template>
 
 <template name="area">
@@ -169,7 +172,7 @@
   {{#with watsonparking}}
     <button class="inc">{{text}}</button>
     <h3>{{score}}</h3>
-  <img id="camera_image" class="camera-image" src="{{url}}"/>
+  <img id="camera_image" class="watson-image" src="{{url}}"/>
   {{/with}}
 </template>
 
