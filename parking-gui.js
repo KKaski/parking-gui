@@ -14,6 +14,13 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.parking.rendered = function() {
+     $('.navbar-collapse a').click(function(e){
+      console.log("collapse");
+      $(".navbar-collapse").collapse('hide');
+    });
+  };
+
   Template.parking.events({
     'click .inc': function () {
       Parking.update(Session.get("selectedArea"), {$inc: {places: 1}});

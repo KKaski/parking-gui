@@ -238,8 +238,11 @@ body {
 }
 
 .table-section {
+    position: relative;
     height: 3000px;
-    width: 100%;
+    width: 120%;
+    left:-100px;
+    min-width: 350px;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -249,7 +252,7 @@ body {
     position: relative;
     height: 3000px;
     width: 90%;
-    left:200px;
+    left:0px;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -258,7 +261,7 @@ body {
     position: relative;
     height: 3000px;
     width: 100%;
-    left:10%;
+    left:0px;
     padding-top: 150px;
     padding-right: 20%;
     padding-left: 20%;

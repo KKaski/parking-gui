@@ -12,7 +12,7 @@
 
 <body>
 
- <nav class="navbar navbar-inverse navbar-default navbar-collapse navbar-fixed-top " role="navigation">
+ <nav class="navbar navbar-inverse navbar-default navbar-fixed-top " role="navigation">
   <div class="container-fluid">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -132,31 +132,13 @@
 <section id="about" class="about-section">
   <div class="about-text">
   <h1>About Nokia Parking Advisor</h1>
-  This is Demo app running on IBM Bluemix platform. Application is writen with Node.js and utilizing Meteor framework in the GUU layer.
+  This is Demo app running in IBM Bluemix platform. Application is writen with Node.js and utilizing Meteor framework in the GUU layer.
   Application uses Node-Red to implement set of microservices. Watson is used for Visual recognition of the Demo. 
 
-  <h2>Some Implementation details</h2>
+  <h4>Microservices Source</h4>
   <a href="https://parking-nr.mybluemix.net/">Node-Red Code</a>
-  <br>
-  Application has two node.js runtimes. One for serving the Meteor based GUI layer and second to implement
-  microservices using Node-Red framework. Node-Red integrates to the car charching API through rest and updates the 
-  Mongo database with the current free spaces information. Meteor framework distributes changes to all connected clients
-  as the data is updated.
-  <br>
-  Timeseries data of freespaces is collected to cloudant nosql database and replicated to dashDB for analytical
-  queries. Watson Visual recognition is trained with parking space images and provides confidence level of free
-  spaces in the image.
   </div>
 </section>
-
-<script>
-  $( document ).ready(function() {
-    $('.navbar-collapse a').click(function(e){
-      $(".navbar-collapse").collapse('hide');
-    });
-  }
-</script>
-
 </body>
 
 <template name="parking">
