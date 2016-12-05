@@ -205,7 +205,7 @@ body {
     left:-100px;
     padding-top: 80px;
     text-align: center;
-    background: #eee;
+    background: #A8BBC1;
 }
 
 .watson-section {
@@ -231,14 +231,21 @@ body {
 .apis-section {
     position: relative;
     height: 140%;
-    width: 140%;
+    width: 120%;
     left:0px;
     padding-top: 50px;
     padding-right: 10%;
     padding-left: 10%;
     text-align: center;
-    background: #eee;
+    background: #A8BBC1;
 }
+
+.apis-text {
+    position: relative;
+    width: 80%;
+    left: 0%; 
+}
+
 .about-section {
     position: relative;
     height: 140%;
